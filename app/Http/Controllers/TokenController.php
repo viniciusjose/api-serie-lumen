@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\Hash;
 
 class TokenController extends Controller
 {
+    /**
+     * Método que realiza a geração do token para usuários que não estão cadastrados
+     * na API.
+     *
+     * @param Request $request
+     * @return void
+     */
     public function gerarToken(Request $request)
     {
         $this->validate($request, [
